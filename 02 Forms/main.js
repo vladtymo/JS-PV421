@@ -13,14 +13,15 @@ addBtn.onclick = (event) => {
     event.preventDefault();
 
     // read form values
+    const item = new product(
+        nameInput.value,
+        priceInput.value,
+        quantityInput.value,
+        categoryInput.value,
+        isUsedInput.checked
+    );
 
-    tableBody.innerHTML += `<tr>
-                <td>${nameInput.value}</td>
-                <td>${priceInput.value}</td>
-                <td>${quantityInput.value}</td>
-                <td>${categoryInput.value}</td>
-                <td>${isUsedInput.checked}</td>
-            </tr>`;
+    tableBody.innerHTML += item.toHTMLRow();
 }
 
 clearBtn.onclick = () => {
