@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1>Communicating with Server using JS</h1>
+    <p>
+        AJAX (Asynchronous JavaScript and XML) is a technique that allows web pages to communicate with a server without
+        reloading the entire page. It enables dynamic content updates, improving user experience.
+    </p>
+
+    <h2>User List</h2>
+    <ul class="user-list">
+        <!-- users -->
+    </ul>
+
+    <h2>Search Product</h2>
+    <form name="searchForm">
+        <label>
+            Product Name:
+            <input type="text" id="name" id="name" placeholder="Enter product name">
+        </label>
+        <button type="submit" id="searchBtn">Search</button>
+    </form>
+
+    <h3>Product Data</h3>
+    <p id="product-data"></p>
+    <script src="./main.js"></script>
+    <script src="./product.js"></script>
+</body>
+
+</html>
