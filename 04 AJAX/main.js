@@ -6,7 +6,7 @@ const url = "https://jsonplaceholder.typicode.com/users";
 
 async function loadUsers() {
     // send HTTP GET request to the URL
-    const response = await fetch(url);
+    const response = await fetch(url); // 10s
 
     console.log(response.status);
     // response.headers.forEach((value, key) => {
@@ -29,7 +29,29 @@ async function loadUsers() {
 
     console.log("Got response!");
 }
+function loadUsersThen() {
+    // send HTTP GET request to the URL
+    fetch(url) // 10s
+        .then((response) => {
+            console.log(response.status);
 
-loadUsers();
+            return response.json();
+        })
+        .then(users => {
+            console.log(users);
+
+            for (const i of users) {
+                userList.innerHTML += `<li>${i.name} (${i.email})</li>`;
+            }
+
+            console.log("Got response!");
+        })
+        .catch((err) => console.log(err))
+}
+
+// loadUsers();
+loadUsersThen();
 
 console.log("Another code...");
+
+//....
