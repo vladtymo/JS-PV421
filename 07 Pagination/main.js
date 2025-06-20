@@ -17,7 +17,7 @@ function addProductToHtml(i) {
                             <div class="card-body">
                                 <h5 class="card-title">${i.title}</h5>
                                 <p class="card-text">${i.price}$ - ${i.category}</p>
-                            </div>
+                            </div
                         </div>
                     </div>`
 }
